@@ -11,7 +11,7 @@ export const CreateSlide: React.FC<Props> = (props) => {
 
     return (
         <>
-            1
+            スライドを作成するページ
         </>
     )
 }
