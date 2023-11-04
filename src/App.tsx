@@ -16,6 +16,7 @@ import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import DeleteIcon from '@mui/icons-material/Delete';
+import ArticleIcon from '@mui/icons-material/Article';
 import { Page } from './components/pages/page'
 import './css/App.css';
 
@@ -32,29 +33,34 @@ const pageIndex = [
         name: 'スライドを作成する',
         icon: CreateNewFolderIcon,
     },
-]
-
-const actionIndex = [
     {
-        id: 11,
+        id: 3,
         name: '登録済み画像一覧',
         icon: CollectionsIcon,
     },
     {
-        id: 12,
+        id: 4,
         name: '画像を登録する',
         icon: AddPhotoAlternateIcon,
     },
     {
-        id: 13,
+        id: 5,
         name: 'データを全て削除',
         icon: DeleteIcon,
     }
 ]
 
+const actionIndex = [
+    {
+        id: 11,
+        name: '使い方ガイド',
+        icon: ArticleIcon,
+    }
+]
+
 function App() {
 
-    const [pageState, setPageState] = React.useState(1)
+    const [pageState, setPageState] = React.useState(4)
 
     const changePageState = (id :number) => {
         return () => {
@@ -68,8 +74,8 @@ function App() {
                 <CssBaseline />
                 <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
                     <Toolbar>
-                        <Typography variant="h6" noWrap component="div">
-                            スライドメーカー
+                        <Typography variant="h6" noWrap component="div" sx={{ fontWeight: 800, fontSize: '24px' }}>
+                            スライドメーカー　〜Make irreplaceable slides that contain your ambitions〜
                         </Typography>
                     </Toolbar>
                 </AppBar>
