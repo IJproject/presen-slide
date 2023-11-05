@@ -60,7 +60,7 @@ const actionIndex = [
 
 function App() {
 
-    const [pageState, setPageState] = React.useState(4)
+    const [pageState, setPageState] = React.useState(2)
 
     const changePageState = (id :number) => {
         return () => {
